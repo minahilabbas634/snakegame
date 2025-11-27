@@ -13,6 +13,8 @@ html,body{
    --bg-primary-color:#0c0c0c;
    --text-primary-color:#f0f0f0;
    --bg-fill-color:#fdfdfc;
+--bg-food-color:red;
+
 --space-xs:4px;
 --space-sm:8px;
 --space-md:16px;
@@ -39,6 +41,16 @@ main,section{
     width: 100%;
     height: 100%;
 
+}
+.btn{
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn:hover{
+     transform: scale(1.1);
 }
 section{
     padding:var(--space-2xl) ;
@@ -74,4 +86,29 @@ box-sizing: border-box;
 }
 .fill{
     background-color:var(--bg-fill-color);
+}
+.food{
+    background-color: var(--bg-food-color);
+}
+.modal{
+    height: 100vh;
+    width: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: #35353587;
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal .startgame,
+.modal.gameover
+{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap:var(--space-lg)
+}
+.modal.gameover{
+    display: none;
 }
