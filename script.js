@@ -120,6 +120,8 @@ function gameOver() {
 
 btnstrt.addEventListener("click", () => {
     modal.style.display = "none";
+        generateFood(); // Make sure the food position is valid
+    blocks[`${food.x}-${food.y}`].classList.add("food"); 
     startTime = Date.now();
     intervalid = setInterval(render, 300);
 });
