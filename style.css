@@ -92,7 +92,7 @@ box-sizing: border-box;
 }
 .modal{
     height: 100vh;
-    width: 100vh;
+    width: 100vw;
     position: fixed;
     top: 0;
     background-color: #35353587;
@@ -102,13 +102,13 @@ box-sizing: border-box;
     align-items: center;
 }
 .modal .startgame,
-.modal.gameover
+.modal .gameover
 {
 display: flex;
 flex-direction: column;
 align-items: center;
 gap:var(--space-lg)
 }
-.modal.gameover{
+.modal .gameover{
     display: none;
 }
